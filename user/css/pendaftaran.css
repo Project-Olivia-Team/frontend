@@ -1,0 +1,76 @@
+body {
+  background-color: #fff;
+}
+.header {
+  background-color: white;
+  border-bottom: 2px solid #a00000;
+}
+.footer {
+  background-color: #a00000;
+  color: white;
+  padding: 10px 0;
+}
+
+.content {
+  background-color: #a00000;
+  padding: 25px;
+  color: white;
+  border-radius: 10px;
+  margin: 20px -100px;
+}
+.content .col-md-4 {
+  border-right: 1px solid white;
+}
+.content .col-md-4:last-child {
+  border-right: none;
+}
+.form-section {
+  background-color: #a00000;
+  padding: 50px;
+  border-radius: 10px;
+  color: white;
+}
+.form-control {
+  border-radius: 5px;
+}
+.btn-custom {
+  color: #a00000;
+  background-color: white;
+  border-radius: 5px;
+}
+.btn-custom:hover {
+  background-color: #900000;
+  color: white;
+  border: solid white 1px;
+}
+.navbar-nav .nav-item .nav-link {
+  color: black;
+  font-size: 18px;
+  font-weight: 450;
+  margin: 0px 10px;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #a00000;
+}
+.footer .footer-column {
+  margin-bottom: 20px;
+}
+.footer .footer-column h4 {
+  margin-bottom: 15px;
+}
+.footer .footer-column p {
+  margin-bottom: 10px;
+}
+.footer .social-media a {
+  margin-right: 15px;
+  color: white;
+  font-size: 24px;
+}
+
+.footer .social-media a:hover {
+  color: #ddd;
+}
+.footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+}
