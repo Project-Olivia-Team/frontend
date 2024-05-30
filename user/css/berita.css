@@ -3,25 +3,31 @@ body {
 }
 
 .header {
-  background-color: white;
+  background-color: #ae252c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
-  background-color: #a00000;
+  background-color: #ae252c;
   color: white;
   padding: 10px 0;
 }
 
+.nav-item.active .nav-link {
+  border-bottom: 3px solid white;
+}
+.navbar-nav .nav-item.active .nav-link {
+  color: white;
+}
 .navbar-nav .nav-item .nav-link {
-  color: black;
+  color: #fff;
   font-size: 18px;
   font-weight: 450;
   margin: 0px 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #a00000;
+  color: #000;
 }
 
 .footer .footer-column {
@@ -53,7 +59,7 @@ body {
 }
 
 .text-center {
-  color: #a00000;
+  color: #ae252c;
 }
 
 .news-card {
@@ -78,11 +84,40 @@ body {
 }
 
 .news-card .btn-link {
-  color: #a00000;
+  color: #ae252c;
   text-align: right;
   margin-right: 15px;
 }
 
 .news-card .btn-link:hover {
   text-decoration: underline;
+}
+
+.berita-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 80px; /* to accommodate fixed header */
+}
+
+.berita-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.berita-author,
+.berita-date {
+  font-size: 1rem;
+  color: #555;
+}
+
+.berita-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.berita-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 20px;
 }

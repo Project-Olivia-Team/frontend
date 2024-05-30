@@ -3,28 +3,32 @@ body {
 }
 
 .header {
-  background-color: white;
-  border-bottom: 2px solid #a00000;
+  background-color: #ae252c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
-  background-color: #a00000;
+  background-color: #ae252c;
   color: white;
   padding: 10px 0;
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: black;
+  color: #fff;
   font-size: 18px;
   font-weight: 450;
   margin: 0px 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #a00000;
+  color: #000;
 }
-
+.nav-item.active .nav-link {
+  border-bottom: 3px solid white;
+}
+.navbar-nav .nav-item.active .nav-link {
+  color: white;
+}
 .footer .footer-column {
   margin-bottom: 20px;
 }
@@ -63,4 +67,9 @@ body {
 
 .table .btn {
   margin: 0 5px;
+}
+
+.merah {
+  background-color: #ae252c;
+  color: #fff;
 }

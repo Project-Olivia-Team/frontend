@@ -2,17 +2,35 @@ body {
   background-color: #fff;
 }
 .header {
-  background-color: white;
+  background-color: #ae252c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .footer {
-  background-color: #a00000;
+  background-color: #ae252c;
   color: white;
   padding: 10px 0;
 }
 
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 450;
+  margin: 0px 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000;
+}
+.nav-item.active .nav-link {
+  border-bottom: 3px solid white;
+}
+.navbar-nav .nav-item.active .nav-link {
+  color: white;
+}
+
 .content {
-  background-color: #a00000;
+  background-color: #ae252c;
   padding: 25px;
   color: white;
   border-radius: 10px;
@@ -25,7 +43,7 @@ body {
   border-right: none;
 }
 .form-section {
-  background-color: #a00000;
+  background-color: #ae252c;
   padding: 50px;
   border-radius: 10px;
   color: white;
@@ -34,24 +52,17 @@ body {
   border-radius: 5px;
 }
 .btn-custom {
-  color: #a00000;
+  color: #ae252c;
   background-color: white;
   border-radius: 5px;
+  font-weight: 550;
 }
 .btn-custom:hover {
   background-color: #900000;
   color: white;
   border: solid white 1px;
 }
-.navbar-nav .nav-item .nav-link {
-  color: black;
-  font-size: 18px;
-  font-weight: 450;
-  margin: 0px 10px;
-}
-.navbar-nav .nav-item .nav-link:hover {
-  color: #a00000;
-}
+
 .footer .footer-column {
   margin-bottom: 20px;
 }
