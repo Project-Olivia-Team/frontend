@@ -58,9 +58,14 @@
         <main class="main-content col-lg-9 ml-sm-auto col-md-9 pt-3 px-4">
           <h2>Manajemen User</h2>
           <div class="tambah-search d-flex justify-content-between mb-3">
-            <a href="tambahuser.html"
-              ><button class="btn merah">Tambah user</button></a
+            <button
+              class="btn merah"
+              data-toggle="modal"
+              data-target="#tambahUserModal"
             >
+              Tambah user
+            </button>
+
             <div class="input-group" style="width: 300px">
               <input
                 type="text"
@@ -92,110 +97,21 @@
                 <td>anggi@gmail.com</td>
                 <td>administrator</td>
                 <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
+                  <button
+                    class="btn btn-primary btn-sm"
+                    data-toggle="modal"
+                    data-target="#editUserModal"
                   >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
+                    Edit
+                  </button>
+
+                  <button
+                    class="btn merah btn-sm"
+                    data-toggle="modal"
+                    data-target="#deleteUserModal"
                   >
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Hilda</td>
-                <td>hilda@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Abim</td>
-                <td>abim@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Lala</td>
-                <td>lala@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Putri</td>
-                <td>putri@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Ali</td>
-                <td>ali@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Amin</td>
-                <td>amin@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Doni</td>
-                <td>doni@gmail.com</td>
-                <td>user</td>
-                <td class="btn-aksi">
-                  <a href="edituser.html"
-                    ><button class="btn btn-primary btn-sm">Edit</button></a
-                  >
-                  <a href=""
-                    ><button class="btn merah btn-sm">Delete</button></a
-                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -210,6 +126,224 @@
         </main>
       </div>
     </div>
+
+    <!-- Modal tambah -->
+    <div
+      class="modal fade"
+      id="tambahUserModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="tambahUserModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tambahUserModalLabel">Tambah User</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="userForm">
+              <div class="form-group">
+                <label for="fotoProfil">Foto Profil</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="fotoProfil"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Nama"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="bloodType">Golongan Darah</label>
+                <select class="form-control" id="bloodType" required>
+                  <option value="">Pilih Golongan Darah</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="level">Level</label>
+                <select class="form-control" id="level">
+                  <option>administrator</option>
+                  <option>user</option>
+                </select>
+              </div>
+              <div class="text-right">
+                <a href="user.html"
+                  ><button type="submit" id="" class="btn tambah-user">
+                    Tambah user
+                  </button></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Edit -->
+    <div
+      class="modal fade"
+      id="editUserModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editUserModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="userForm">
+              <div class="form-group">
+                <label for="fotoProfil">Foto Profil</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="fotoProfil"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Nama"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="level">Level</label>
+                <select class="form-control" id="level">
+                  <option>administrator</option>
+                  <option>user</option>
+                </select>
+              </div>
+              <div class="text-right">
+                <a href="user.html"
+                  ><button type="submit" id="" class="btn tambah-user">
+                    Edit user
+                  </button></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div
+      class="modal fade"
+      id="deleteUserModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="deleteUserModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteUserModalLabel">Delete User</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Apakah anda ingin menghapus user ini?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
