@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Merchandise</title>
+    <title>Detail Produk</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../css/merchandise.css" />
+    <link rel="stylesheet" href="../css/detailproduk.css" />
   </head>
   <body>
     <header class="header fixed-top">
@@ -53,72 +53,27 @@
       </div>
     </header>
 
-    <div class="hero-section">
-      <div class="content">
-        <h1>Belanja untuk donasi yang bermanfaat</h1>
-        <div class="search-bar">
-          <input type="text" placeholder="Cari produk..." />
-          <button type="button">Search</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-5 pt-5">
+    <div class="container mt-3 pt-5">
       <div class="row mt-5">
-        <div
-          class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center"
-        >
-          <div class="card product-card">
-            <img
-              src="../../img/baju.jpg"
-              alt="Product Image"
-              class="card-img-top"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Kaos</h5>
-              <p class="card-text">Rp.50.000</p>
-              <button class="btn" onclick="viewDetail('Kaos', 50000)">
-                Detail
-              </button>
-            </div>
-          </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img
+            src="../../img/baju.jpg"
+            alt="Product Image"
+            class="img-fluid product-image"
+          />
         </div>
-
-        <div
-          class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center"
-        >
-          <div class="card product-card">
-            <img
-              src="../../img/baju.jpg"
-              alt="Product Image"
-              class="card-img-top"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Kaos</h5>
-              <p class="card-text">Rp.50.000</p>
-              <button class="btn" onclick="viewDetail('Kaos', 50000)">
-                Detail
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex justify-content-center"
-        >
-          <div class="card product-card">
-            <img
-              src="../../img/baju.jpg"
-              alt="Product Image"
-              class="card-img-top"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Kaos</h5>
-              <p class="card-text">Rp.50.000</p>
-              <button class="btn" onclick="viewDetail('Kaos', 50000)">
-                Detail
-              </button>
-            </div>
-          </div>
+        <div class="col-lg-8 col-md-6 col-sm-12">
+          <h2>Kaos</h2>
+          <p>Rp.50.000</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel
+            orci vitae orci luctus dictum. Phasellus hendrerit purus a magna
+            ultrices, sed placerat nisl tincidunt. Sed vitae ullamcorper tortor.
+            Maecenas et nunc ut libero gravida elementum.
+          </p>
+          <button class="btn merah" onclick="addToCart('Kaos', 50000)">
+            Beli
+          </button>
         </div>
       </div>
     </div>
@@ -158,8 +113,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-      function viewDetail(productName, productPrice) {
-        window.location.href = "detailproduk.html";
+      function addToCart(productName, productPrice) {
+        alert(productName + " telah ditambahkan ke keranjang.");
+        window.location.href = "keranjang.html";
       }
     </script>
   </body>
